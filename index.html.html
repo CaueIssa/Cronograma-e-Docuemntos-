@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ABSOLUT Sport · Cronograma de Envio · Copa do Mundo 2026™</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy:        #0A2540;
+  --navy-soft:   #1A3A5C;
+  --navy-deep:   #061A2E;
+  --cream:       #FAF6F0;
+  --cream-warm:  #F4EEE3;
+  --paper:       #FFFFFF;
+  --gold:        #C9A961;
+  --gold-soft:   #E5D4A6;
+  --action:      #0070F3;
+  --ink:         #1A1A1A;
+  --ink-soft:    #4A4A4A;
+  --muted:       #8A8A8A;
+  --line:        #E8E0D2;
+  --line-soft:   #F0E9DB;
+
+  --serif:  'Fraunces', Georgia, serif;
+  --sans:   'Manrope', system-ui, sans-serif;
+  --mono:   'JetBrains Mono', ui-monospace, monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--cream); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+body::before {
+  content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 1; opacity: .35;
+  background-image:
+    radial-gradient(circle at 20% 25%, rgba(201,169,97,0.05) 0, transparent 50%),
+    radial-gradient(circle at 80% 75%, rgba(10,37,64,0.03) 0, transparent 50%);
+}
+
+/* ─── HEADER ──────────────────────────────────── */
+.topbar { position: sticky; top: 0; z-index: 100; background: var(--navy); color: var(--cream); border-bottom: 3px solid var(--gold); }
+.topbar-inner { max-width: 1240px; margin: 0 auto; padding: 18px 32px; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+.brand { display: flex; align-items: center; gap: 14px; text-decoration: none; color: inherit; cursor: pointer; }
+.brand-mark { width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, var(--gold) 0%, var(--gold-soft) 100%); display: grid; place-items: center; font-family: var(--serif); font-weight: 600; font-size: 16px; color: var(--navy-deep); }
+.brand-text { display: flex; flex-direction: column; line-height: 1.1; }
+.brand-text-1 { font-family: var(--serif); font-weight: 500; font-size: 18px; }
+.brand-text-2 { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-soft); margin-top: 2px; }
+.topbar-meta { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-soft); }
+
+.back-btn { display: inline-flex; align-items: center; gap: 8px; background: transparent; border: 1px solid rgba(255,255,255,0.2); color: var(--cream); padding: 8px 14px; border-radius: 2px; font-family: var(--sans); font-size: 12px; cursor: pointer; transition: all 0.15s; letter-spacing: 0.04em; }
+.back-btn:hover { background: rgba(255,255,255,0.08); border-color: var(--gold-soft); color: var(--gold-soft); }
+
+/* ─── VIEWS ──────────────────────────────────── */
+.view { display: none; max-width: 1240px; margin: 0 auto; padding: 0 32px; position: relative; z-index: 2; }
+.view.active { display: block; animation: fadeIn 0.4s ease-out; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ─── HERO ──────────────────────────────────── */
+.hero { padding: 72px 0 48px; }
+.hero-eyebrow { display: flex; align-items: center; gap: 14px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 28px; }
+.hero-eyebrow .num { color: var(--gold); font-weight: 500; }
+.hero-eyebrow .sep { flex: 0 0 40px; height: 1px; background: var(--line); }
+.hero-title { font-family: var(--serif); font-weight: 400; font-size: clamp(40px, 6vw, 72px); line-height: 1.02; letter-spacing: -0.02em; color: var(--navy-deep); margin-bottom: 24px; }
+.hero-title em { font-style: italic; color: var(--gold); font-weight: 300; }
+.hero-lede { font-family: var(--serif); font-weight: 300; font-size: 21px; line-height: 1.45; color: var(--ink-soft); max-width: 680px; letter-spacing: -0.01em; }
+
+/* ─── GANTT ─────────────────────────────────── */
+.gantt-wrap { margin-top: 56px; padding: 40px 0 60px; background: var(--paper); border: 1px solid var(--line); position: relative; }
+.gantt-wrap::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--gold) 0%, var(--gold-soft) 100%); }
+.gantt-head { padding: 0 40px 24px; display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--line-soft); }
+.gantt-title { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 22px; color: var(--navy-deep); letter-spacing: -0.01em; }
+.gantt-meta { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+
+/* GANTT GRID — 6 day columns + a final "label trailer" column for country names */
+.gantt {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr) minmax(160px, 200px);
+  padding: 24px 40px 8px;
+  position: relative;
+  gap: 4px 0;
+}
+
+/* date header row */
+.gantt-day {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  text-align: center;
+  padding: 8px 4px 14px;
+  border-bottom: 1px solid var(--line-soft);
+}
+.gantt-day .day-num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 22px;
+  color: var(--navy-deep);
+  display: block;
+  letter-spacing: -0.02em;
+  margin-bottom: 2px;
+}
+.gantt-day .day-label { font-size: 10px; color: var(--muted); }
+.gantt-day-trail { border-bottom: 1px solid var(--line-soft); }
+
+/* full row container — holds bar + label inline */
+.gantt-row {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr) minmax(160px, 200px);
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+.gantt-row:last-child { border-bottom: none; }
+
+/* The bar */
+.gantt-bar-cell { position: relative; padding: 6px 0; }
+.gantt-bar {
+  position: relative;
+  height: 38px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-family: var(--sans);
+  overflow: hidden;
+  margin: 0 4px;
+}
+.gantt-bar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0.12) 0%, transparent 50%, rgba(0,0,0,0.08) 100%);
+  pointer-events: none;
+}
+.gantt-bar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(10,37,64,0.18);
+}
+.gantt-bar .bar-start, .gantt-bar .bar-end {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  z-index: 1;
+}
+.gantt-bar .bar-arrow {
+  position: absolute;
+  right: 14px;
+  opacity: 0;
+  transition: opacity 0.2s, transform 0.2s;
+  z-index: 1;
+}
+.gantt-bar:hover .bar-arrow { opacity: 1; transform: translateX(4px); }
+.gantt-bar:hover .bar-end { opacity: 0.4; }
+
+/* label cell — sits in a column right after the bar's last column */
+.gantt-label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding-left: 16px;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--navy-deep);
+  letter-spacing: -0.005em;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.gantt-label:hover { opacity: 0.7; }
+.gantt-label .order-num {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  color: var(--muted);
+  letter-spacing: 0.12em;
+}
+.gantt-label .iso {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  color: var(--gold);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 3px 6px;
+  border: 1px solid var(--gold-soft);
+  border-radius: 2px;
+  background: var(--cream-warm);
+}
+.gantt-label .name { color: var(--navy-deep); }
+
+.gantt-instructions {
+  margin-top: 32px;
+  padding: 22px 28px;
+  background: var(--cream-warm);
+  border-left: 3px solid var(--gold);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+.gantt-instructions strong { color: var(--navy-deep); }
+
+/* ─── COUNTRY HERO ──────────────────────────── */
+.country-hero { padding: 56px 0 40px; border-bottom: 1px solid var(--line); }
+.country-hero-flag { font-size: 64px; line-height: 1; margin-bottom: 20px; }
+.country-hero-name {
+  font-family: var(--serif); font-weight: 400; font-size: clamp(36px, 5.5vw, 64px);
+  line-height: 1.02; letter-spacing: -0.02em; color: var(--navy-deep); margin-bottom: 24px;
+}
+.country-hero-name em { font-style: italic; color: var(--gold); font-weight: 300; }
+
+.country-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: stretch;
+  margin-top: 8px;
+}
+
+.country-window {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  padding: 14px 26px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--gold);
+  flex-wrap: wrap;
+}
+.country-window-block { display: flex; flex-direction: column; gap: 4px; }
+.country-window-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); }
+.country-window-date { font-family: var(--serif); font-style: italic; font-weight: 500; font-size: 22px; color: var(--navy-deep); letter-spacing: -0.01em; }
+.country-window-arrow { color: var(--gold); font-size: 20px; }
+
+/* Language switcher */
+.lang-switch {
+  display: inline-flex;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.lang-btn {
+  background: transparent;
+  border: none;
+  padding: 0 16px;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  transition: all 0.15s;
+  border-right: 1px solid var(--line);
+}
+.lang-btn:last-child { border-right: none; }
+.lang-btn:hover { color: var(--navy-deep); background: var(--cream-warm); }
+.lang-btn.active { background: var(--navy); color: var(--gold-soft); }
+.lang-btn .lang-flag { font-size: 14px; }
+
+/* Download button */
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 22px;
+  background: var(--navy);
+  color: var(--cream);
+  border: none;
+  border-radius: 2px;
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.18s;
+  text-decoration: none;
+}
+.download-btn:hover {
+  background: var(--navy-deep);
+  transform: translateY(-1px);
+}
+.download-btn .dl-icon { color: var(--gold-soft); }
+
+/* ─── SECTION ───────────────────────────────── */
+.section { padding: 56px 0; border-bottom: 1px solid var(--line); }
+.section:last-of-type { border-bottom: none; }
+.section-head { display: grid; grid-template-columns: 80px 1fr; gap: 32px; align-items: baseline; margin-bottom: 36px; }
+.section-num { font-family: var(--serif); font-weight: 300; font-size: 36px; color: var(--gold); font-style: italic; line-height: 1; }
+.section-title { font-family: var(--serif); font-weight: 400; font-size: 32px; line-height: 1.15; letter-spacing: -0.015em; color: var(--navy-deep); }
+.section-sub { grid-column: 2; margin-top: 8px; font-size: 15px; color: var(--ink-soft); line-height: 1.55; max-width: 640px; }
+.section-body { padding-left: calc(80px + 32px); }
+
+/* ─── FILTER BUTTONS ────────────────────────── */
+.filter-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.filter-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  max-width: 720px;
+}
+@media (max-width: 640px) {
+  .filter-bar { grid-template-columns: repeat(2, 1fr); }
+}
+
+.filter-btn {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 22px 14px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: var(--sans);
+  color: var(--ink-soft);
+  text-align: center;
+}
+.filter-btn:hover {
+  border-color: var(--gold);
+  color: var(--navy-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(10,37,64,0.08);
+}
+.filter-btn.active {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: var(--cream);
+}
+.filter-btn.active::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--gold);
+}
+
+.filter-btn .filter-icon {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  color: var(--navy);
+  transition: color 0.18s;
+}
+.filter-btn:hover .filter-icon { color: var(--gold); }
+.filter-btn.active .filter-icon { color: var(--gold-soft); }
+
+.filter-btn .filter-name {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: -0.005em;
+}
+
+.filter-btn .filter-check {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--cream-warm);
+  border: 1px solid var(--line);
+  display: grid;
+  place-items: center;
+  transition: all 0.2s;
+  opacity: 0;
+}
+.filter-btn:hover .filter-check { opacity: 0.6; }
+.filter-btn.active .filter-check {
+  opacity: 1;
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--navy-deep);
+}
+
+/* ─── REQUIRED FIELDS ───────────────────────── */
+.required-panel {
+  margin-top: 36px;
+  animation: slideUp 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+@keyframes slideUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+
+.required-empty {
+  padding: 60px 40px;
+  text-align: center;
+  background: var(--paper);
+  border: 1px dashed var(--line);
+}
+.required-empty-icon { color: var(--gold); margin-bottom: 14px; display: inline-flex; }
+.required-empty-text { font-family: var(--serif); font-style: italic; font-size: 19px; color: var(--ink-soft); }
+
+.required-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.required-header-title {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-style: italic;
+  font-size: 22px;
+  color: var(--navy-deep);
+  letter-spacing: -0.01em;
+}
+.required-header-count {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.fields-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.field-card {
+  background: var(--paper);
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: background 0.15s;
+}
+.field-card:hover { background: var(--cream-warm); }
+.field-card.highlight {
+  background: linear-gradient(135deg, #FFF8E8 0%, #FFFCF4 100%);
+  position: relative;
+}
+.field-card.highlight::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--gold);
+}
+.field-icon {
+  width: 32px; height: 32px;
+  display: grid; place-items: center;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+.field-card.highlight .field-icon { color: var(--gold); }
+.field-label { font-family: var(--sans); font-weight: 700; font-size: 14px; color: var(--navy-deep); letter-spacing: -0.005em; }
+.field-help { font-size: 12.5px; color: var(--muted); line-height: 1.5; }
+.field-card.highlight .field-help { color: var(--ink-soft); }
+.field-tag { display: inline-block; font-family: var(--mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; padding: 3px 7px; border-radius: 2px; margin-top: 4px; width: fit-content; }
+.tag-required { background: var(--navy); color: var(--cream); }
+.tag-fifa { background: var(--gold); color: var(--navy-deep); }
+.tag-country { background: var(--cream-warm); color: var(--navy); border: 1px solid var(--gold-soft); }
+
+.required-note {
+  margin-top: 24px;
+  padding: 18px 24px;
+  background: var(--cream-warm);
+  border-left: 2px solid var(--gold);
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+.required-note strong { color: var(--navy-deep); }
+.required-note code { font-family: var(--mono); font-size: 12px; background: rgba(10,37,64,0.06); padding: 1px 5px; border-radius: 2px; color: var(--navy-deep); }
+
+/* ─── STEPPER ───────────────────────────────── */
+.stepper { display: grid; gap: 0; }
+.step {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 28px;
+  padding: 28px 0;
+  border-top: 1px solid var(--line-soft);
+  position: relative;
+}
+.step:first-child { border-top: none; padding-top: 8px; }
+.step-circle {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--paper); border: 1px solid var(--navy);
+  display: grid; place-items: center; color: var(--navy);
+  flex-shrink: 0; position: relative; z-index: 2;
+}
+.step:not(:last-child)::after {
+  content: ''; position: absolute; left: 21px; top: 50px; bottom: -16px;
+  width: 1px; background: var(--line); z-index: 1;
+}
+.step-content { padding-top: 4px; }
+.step-num { font-family: var(--mono); font-size: 10px; letter-spacing: 0.18em; color: var(--gold); text-transform: uppercase; margin-bottom: 6px; display: block; }
+.step-title { font-family: var(--serif); font-weight: 500; font-size: 22px; line-height: 1.2; color: var(--navy-deep); letter-spacing: -0.01em; margin-bottom: 10px; }
+.step-desc { font-size: 14.5px; line-height: 1.6; color: var(--ink-soft); max-width: 640px; }
+.step-desc strong { color: var(--navy-deep); font-weight: 600; }
+.step-desc code { font-family: var(--mono); font-size: 12px; background: var(--cream-warm); padding: 2px 6px; border-radius: 2px; color: var(--navy-deep); }
+.step-tips {
+  margin-top: 12px; padding: 14px 18px;
+  background: var(--cream-warm); border-left: 2px solid var(--gold);
+  font-size: 13px; color: var(--ink-soft); line-height: 1.55;
+}
+.step-tips strong { color: var(--navy-deep); }
+
+/* ─── FOOTER ────────────────────────────────── */
+.view-footer { padding: 60px 0 80px; text-align: center; }
+.view-footer .slogan { font-family: var(--serif); font-style: italic; font-size: 24px; color: var(--navy-deep); margin-bottom: 14px; letter-spacing: -0.01em; }
+.view-footer .divider { width: 40px; height: 1px; background: var(--gold); margin: 20px auto; }
+.view-footer .meta { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+
+/* ─── RESPONSIVE ────────────────────────────── */
+@media (max-width: 900px) {
+  .topbar-meta { display: none; }
+  .gantt {
+    grid-template-columns: repeat(6, 1fr) 130px;
+    padding: 20px 20px 8px;
+  }
+  .gantt-row { grid-template-columns: repeat(6, 1fr) 130px; }
+  .gantt-head { padding: 0 20px 24px; }
+  .gantt-bar { padding: 0 8px; font-size: 10px; }
+  .gantt-bar .bar-end { display: none; }
+  .gantt-label { padding-left: 10px; font-size: 11.5px; gap: 6px; }
+  .section-head { grid-template-columns: 48px 1fr; gap: 16px; }
+  .section-num { font-size: 28px; }
+  .section-title { font-size: 24px; }
+  .section-body { padding-left: 0; }
+}
+@media (max-width: 640px) {
+  .topbar-inner { padding: 14px 20px; gap: 16px; }
+  .view { padding: 0 20px; }
+  .hero { padding: 48px 0 32px; }
+  .gantt-day .day-num { font-size: 16px; }
+  .gantt-label .iso { font-size: 9px; padding: 2px 4px; }
+  .gantt-label .name { font-size: 11px; }
+  .country-window { gap: 14px; padding: 14px 18px; }
+  .country-window-date { font-size: 18px; }
+  .country-toolbar { flex-direction: column; }
+  .lang-switch, .download-btn { width: 100%; justify-content: center; padding: 12px; }
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="#" class="brand" onclick="goHome(event)">
+      <div class="brand-mark">A</div>
+      <div class="brand-text">
+        <span class="brand-text-1">ABSOLUT Sport</span>
+        <span class="brand-text-2">Cronograma de Envio · B2B</span>
+      </div>
+    </a>
+    <div id="topbar-right">
+      <div class="topbar-meta">Copa do Mundo FIFA 2026™</div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="view-home" class="view active"></section>
+  <section id="view-country" class="view"></section>
+</main>
+
+<script>
+// ─── ICONS ──────────────────────────────────────
+const icons = {
+  user:    '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg>',
+  globe:   '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>',
+  passport:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M9 17h6"/></svg>',
+  id:      '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="12" r="2.5"/><path d="M14 10h5M14 14h5"/></svg>',
+  calendar:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>',
+  phone:   '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L7.9 9.5a16 16 0 0 0 6 6l1.1-1.2a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg>',
+  mail:    '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>',
+
+  ticket:  '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7v3a2 2 0 0 1 0 4v3a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-3a2 2 0 0 1 0-4V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z"/><path d="M9 5v14"/></svg>',
+  hotel:   '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21V12h6v9"/><path d="M3 21h18"/></svg>',
+  car:     '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M3 13l2-6h14l2 6M5 13v4M19 13v4M7 13h10"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/></svg>',
+  shield:  '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v7c0 5 3.5 9 8 10 4.5-1 8-5 8-10V5l-8-3z"/><path d="m9 12 2 2 4-4"/></svg>',
+
+  inbox:   '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.5 6h13L22 12v7a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-7z"/></svg>',
+  key:     '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="m10.85 12.15 8-8M19 5l3 3M14 8l3 3"/></svg>',
+  shieldStep:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v7c0 5 3.5 9 8 10 4.5-1 8-5 8-10V5l-8-3z"/><path d="m9 12 2 2 4-4"/></svg>',
+  layout:  '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>',
+  branch:  '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><circle cx="18" cy="6" r="3"/><path d="M6 9v3a3 3 0 0 0 3 3h6"/></svg>',
+  edit:    '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>',
+  check:   '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m22 4-10 10-3-3"/></svg>',
+
+  arrow:   '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>',
+  back:    '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>',
+  cursor:  '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z"/><path d="M13 13l6 6"/></svg>',
+  empty:   '<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/></svg>',
+  download:'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5M12 15V3"/></svg>',
+  checkSmall:'<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>',
+};
+
+// ─── COUNTRIES ──────────────────────────────────
+// col = [start, end] within a 1..7 grid (cols 1-6 are days, col 7 is the label trail)
+const COUNTRIES = [
+  { id: 'brasil',    order: 1, iso: 'BR', name: 'Brasil',    flag: '🇧🇷', start: '11/05', end: '12/05', col: [1,3], color: '#1E7E4A', doc: 'CPF' },
+  { id: 'alemanha',  order: 2, iso: 'DE', name: 'Alemanha',  flag: '🇩🇪', start: '12/05', end: '13/05', col: [2,4], color: '#1A5E8C', doc: 'Personalausweis' },
+  { id: 'mexico',    order: 3, iso: 'MX', name: 'México',    flag: '🇲🇽', start: '13/05', end: '14/05', col: [3,5], color: '#8B3A8B', doc: 'DNI' },
+  { id: 'eua',       order: 3, iso: 'US', name: 'EUA',       flag: '🇺🇸', start: '13/05', end: '14/05', col: [3,5], color: '#5A2D6E', doc: 'ID' },
+  { id: 'colombia',  order: 4, iso: 'CO', name: 'Colômbia',  flag: '🇨🇴', start: '14/05', end: '15/05', col: [4,6], color: '#D4600A', doc: 'DNI' },
+  { id: 'argentina', order: 5, iso: 'AR', name: 'Argentina', flag: '🇦🇷', start: '15/05', end: '16/05', col: [5,7], color: '#C0392B', doc: 'DNI' },
+];
+
+// ─── i18n DICTIONARY ────────────────────────────
+const I18N = {
+  pt: {
+    label: 'PT', flag: '🇧🇷',
+    home: {
+      eyebrow_left: 'Maio · 2026',
+      eyebrow_right: 'Cronograma de Disparo · Documento Interno',
+      title_1: 'Cronograma de envio',
+      title_2: 'por país.',
+      lede: 'A timeline abaixo organiza a ordem de disparo dos pacotes para a Copa do Mundo FIFA 2026™. Clique no país para ver o prazo, os serviços disponíveis e a documentação exigida do passageiro.',
+      gantt_title: 'Janela de envio · 11 a 16 de maio',
+      gantt_meta: '5 fases · 6 países',
+      instructions: '<strong>Como navegar.</strong> Clique sobre a barra ou nome de cada país para abrir o detalhe — prazo de envio, serviços disponíveis e documentação obrigatória do passageiro contextualizada por país.',
+      slogan: 'Sua experiência, nosso esporte.',
+      day_labels: ['MAI · SEG', 'MAI · TER', 'MAI · QUA', 'MAI · QUI', 'MAI · SEX', 'MAI · SÁB'],
+      bar_start: 'INÍCIO', bar_end: 'FIM',
+    },
+    country: {
+      back: 'Voltar ao cronograma',
+      envio_para: 'Envio para',
+      window_start: 'Início do envio',
+      window_end: 'Conclusão prevista',
+      window_doc: 'Documento nacional',
+      download: 'Baixar guia em PDF',
+      download_lang: 'Versão em português',
+      sec1_num: '01',
+      sec1_title: 'Selecione os serviços contratados',
+      sec1_sub: 'Marque os serviços que fazem parte do pacote do passageiro. Os campos obrigatórios serão exibidos abaixo, sem repetições. Você pode selecionar mais de um.',
+      filter_label: 'Serviços do pacote',
+      filter_ticket: 'Ticket',
+      filter_hotel: 'Hotel',
+      filter_transfer: 'Transfer',
+      filter_seguro: 'Seguro',
+      empty_text: 'Selecione um ou mais serviços acima para ver os campos obrigatórios.',
+      required_title: 'Campos obrigatórios',
+      count_one: 'campo',
+      count_many: 'campos',
+      fifa_warn: '<strong>⚠ Atenção crítica — FIFA ID Email.</strong> O e-mail informado precisa ser exatamente o vinculado ao FIFA ID do passageiro. A coluna <code>Confirm FIFA ID Email</code> deve repetir o mesmo endereço — qualquer divergência rejeita o upload. Após a primeira submissão confirmada, o e-mail nas abas de Ticket fica <strong>bloqueado</strong>.',
+      sec2_num: '02',
+      sec2_title: 'Como cadastrar e preencher no portal',
+      sec2_sub: 'Sete etapas — do convite à confirmação. O fluxo é o mesmo para todos os serviços; o que muda é o conjunto de campos exigidos (ver Seção 01).',
+      slogan: 'Sua experiência, nosso esporte.',
+      footer_window: 'Janela',
+    },
+    fields: {
+      nome: { label: 'Nome', help: 'Conforme passaporte.' },
+      sobrenome: { label: 'Sobrenome', help: 'Conforme passaporte.' },
+      nacionalidade: { label: 'Nacionalidade', help: 'Nome completo ou ISO 3166-1 alpha-2 (BR, AR, US).' },
+      paisRes: { label: 'País de residência', help: 'Nome completo ou ISO 3166-1 alpha-2.' },
+      passaporte: { label: 'Passaporte', help: 'Apenas números e letras, sem espaços.' },
+      docNacional: { label: 'Documento nacional', help_template: 'Documento nacional obrigatório para passageiros de {country}. Apenas números e letras, sem espaços.' },
+      nascimento: { label: 'Data de nascimento', help: 'Formato DD/MM/AAAA ou AAAA-MM-DD.' },
+      telefone: { label: 'Telefone', help: 'Internacional com código do país. Ex: +55 21 91234-5678.' },
+      emailFifa: { label: 'E-mail (FIFA ID Email)', help: 'Deve ser exatamente o e-mail vinculado ao FIFA ID do passageiro. É nele que a FIFA entrega o ingresso.' },
+    },
+    tag_required: 'Obrigatório',
+    tag_fifa: 'FIFA ID Email',
+    tag_country_prefix: 'Específico',
+    steps: [
+      { title: 'Receba o e-mail de convite', desc: 'Quando o invoice estiver pronto para coleta de dados, o revendedor recebe um e-mail da ABSOLUT Sport com o número do invoice, o e-mail de acesso e o botão <strong>Open portal and fill in</strong>.', tip: 'O e-mail de acesso é único e pessoal. Não compartilhe.' },
+      { title: 'Cadastre-se ou ative sua conta', desc: 'No primeiro acesso, defina seu nome completo e crie uma senha (mínimo 8 caracteres, com letras e números). Já tem conta? Clique em <code>Back to sign in</code>.', tip: 'O idioma do portal pode ser trocado no canto superior direito (EN · ES · PT).' },
+      { title: 'Aceite os termos legais', desc: 'Antes de acessar o portal, leia e aceite os <strong>Termos de Uso</strong> e a <strong>Política de Privacidade</strong>. O aceite é registrado com IP e data/hora como evidência.', tip: '<strong>Obrigatório:</strong> aceite dos termos. <strong>Opcional:</strong> consentimento para dados sensíveis e comunicações de marketing.' },
+      { title: 'Acesse o painel do invoice', desc: 'Visualize todos os invoices vinculados à sua conta com status, jogo, produto e progresso. Use os filtros (<code>Pending</code>, <code>In progress</code>, <code>Completed</code>) e a barra de busca.', tip: null },
+      { title: 'Escolha o método de preenchimento', desc: '<strong>Caminho A — Planilha:</strong> recomendado para muitos passageiros. Baixe o template, preencha no Excel e suba de volta.<br><br><strong>Caminho B — Formulário:</strong> recomendado para poucos passageiros ou quando o cliente final preenche os próprios dados.', tip: null },
+      { title: 'Preencha os dados dos passageiros', desc: 'Preencha os campos obrigatórios do produto contratado. Em produtos com Ticket, o e-mail informado precisa ser exatamente o vinculado ao FIFA ID — repita na coluna <code>Confirm FIFA ID Email</code>.', tip: 'Após a primeira submissão confirmada, o e-mail nas abas de Ticket fica <strong>BLOQUEADO</strong>. Revise antes de enviar.' },
+      { title: 'Confirmação e status final', desc: 'Quando todos os passageiros estiverem preenchidos, o indicador vai para <strong>100%</strong> com a mensagem <em>All passengers filled!</em>. O invoice aparece como <code>Completed</code>.', tip: 'A aba <strong>History</strong> permite revisar os dados enviados.' },
+    ],
+    etapa: 'Etapa',
+  },
+
+  en: {
+    label: 'EN', flag: '🇺🇸',
+    country: {
+      back: 'Back to schedule',
+      envio_para: 'Delivery to',
+      window_start: 'Delivery start',
+      window_end: 'Expected completion',
+      window_doc: 'National document',
+      download: 'Download PDF guide',
+      download_lang: 'English version',
+      sec1_num: '01',
+      sec1_title: 'Select the contracted services',
+      sec1_sub: 'Check the services included in the passenger\'s package. The required fields will appear below, with no duplicates. You can select more than one.',
+      filter_label: 'Package services',
+      filter_ticket: 'Ticket',
+      filter_hotel: 'Hotel',
+      filter_transfer: 'Transfer',
+      filter_seguro: 'Insurance',
+      empty_text: 'Select one or more services above to see the required fields.',
+      required_title: 'Required fields',
+      count_one: 'field',
+      count_many: 'fields',
+      fifa_warn: '<strong>⚠ Critical attention — FIFA ID Email.</strong> The email provided must be exactly the one linked to the passenger\'s FIFA ID. The <code>Confirm FIFA ID Email</code> column must repeat the same address — any mismatch rejects the upload. After the first confirmed submission, the email in Ticket sheets becomes <strong>locked</strong>.',
+      sec2_num: '02',
+      sec2_title: 'How to register and fill in on the portal',
+      sec2_sub: 'Seven steps — from the invitation to the confirmation. The flow is the same for every service; what changes is the set of required fields (see Section 01).',
+      slogan: 'Your experience, our sport.',
+      footer_window: 'Window',
+    },
+    fields: {
+      nome: { label: 'First name', help: 'As it appears on the passport.' },
+      sobrenome: { label: 'Last name', help: 'As it appears on the passport.' },
+      nacionalidade: { label: 'Nationality', help: 'Full name or ISO 3166-1 alpha-2 (BR, AR, US).' },
+      paisRes: { label: 'Country of residence', help: 'Full name or ISO 3166-1 alpha-2.' },
+      passaporte: { label: 'Passport', help: 'Numbers and letters only, no spaces.' },
+      docNacional: { label: 'National document', help_template: 'Required national document for passengers from {country}. Numbers and letters only, no spaces.' },
+      nascimento: { label: 'Date of birth', help: 'Format DD/MM/YYYY or YYYY-MM-DD.' },
+      telefone: { label: 'Phone', help: 'International format with country code. E.g. +55 21 91234-5678.' },
+      emailFifa: { label: 'Email (FIFA ID Email)', help: 'Must be exactly the email linked to the passenger\'s FIFA ID. This is where FIFA delivers the ticket.' },
+    },
+    tag_required: 'Required',
+    tag_fifa: 'FIFA ID Email',
+    tag_country_prefix: 'Specific',
+    steps: [
+      { title: 'Receive the invitation email', desc: 'When the invoice is ready for data collection, the reseller receives an email from ABSOLUT Sport with the invoice number, the access email and the <strong>Open portal and fill in</strong> button.', tip: 'The access email is unique and personal. Do not share.' },
+      { title: 'Register or activate your account', desc: 'On the first access, set your full name and create a password (minimum 8 characters, with letters and numbers). Already have an account? Click <code>Back to sign in</code>.', tip: 'The portal language can be changed in the top-right corner (EN · ES · PT).' },
+      { title: 'Accept the legal terms', desc: 'Before accessing the portal, read and accept the <strong>Terms of Use</strong> and <strong>Privacy Policy</strong>. Acceptance is recorded with IP and timestamp as evidence.', tip: '<strong>Required:</strong> acceptance of terms. <strong>Optional:</strong> consent for sensitive data and marketing communications.' },
+      { title: 'Access the invoice panel', desc: 'View all invoices linked to your account with status, game, product and progress. Use the filters (<code>Pending</code>, <code>In progress</code>, <code>Completed</code>) and the search bar.', tip: null },
+      { title: 'Choose the filling method', desc: '<strong>Path A — Spreadsheet:</strong> recommended for many passengers. Download the template, fill it in Excel and upload it back.<br><br><strong>Path B — Form:</strong> recommended for few passengers or when the end customer fills in their own data.', tip: null },
+      { title: 'Fill in the passenger data', desc: 'Fill in the required fields for the contracted product. For Ticket products, the email provided must be exactly the one linked to the FIFA ID — repeat it in the <code>Confirm FIFA ID Email</code> column.', tip: 'After the first confirmed submission, the email in Ticket sheets becomes <strong>LOCKED</strong>. Review before submitting.' },
+      { title: 'Confirmation and final status', desc: 'When all passengers are filled, the indicator goes to <strong>100%</strong> with the message <em>All passengers filled!</em>. The invoice appears as <code>Completed</code>.', tip: 'The <strong>History</strong> tab allows you to review the submitted data.' },
+    ],
+    etapa: 'Step',
+  },
+
+  es: {
+    label: 'ES', flag: '🇪🇸',
+    country: {
+      back: 'Volver al cronograma',
+      envio_para: 'Envío para',
+      window_start: 'Inicio del envío',
+      window_end: 'Conclusión prevista',
+      window_doc: 'Documento nacional',
+      download: 'Descargar guía en PDF',
+      download_lang: 'Versión en español',
+      sec1_num: '01',
+      sec1_title: 'Seleccione los servicios contratados',
+      sec1_sub: 'Marque los servicios que forman parte del paquete del pasajero. Los campos obligatorios aparecerán abajo, sin repeticiones. Puede seleccionar más de uno.',
+      filter_label: 'Servicios del paquete',
+      filter_ticket: 'Entrada',
+      filter_hotel: 'Hotel',
+      filter_transfer: 'Transfer',
+      filter_seguro: 'Seguro',
+      empty_text: 'Seleccione uno o más servicios arriba para ver los campos obligatorios.',
+      required_title: 'Campos obligatorios',
+      count_one: 'campo',
+      count_many: 'campos',
+      fifa_warn: '<strong>⚠ Atención crítica — FIFA ID Email.</strong> El correo informado debe ser exactamente el vinculado al FIFA ID del pasajero. La columna <code>Confirm FIFA ID Email</code> debe repetir el mismo correo — cualquier divergencia rechaza la carga. Después de la primera presentación confirmada, el correo en las hojas de Ticket queda <strong>bloqueado</strong>.',
+      sec2_num: '02',
+      sec2_title: 'Cómo registrarse y completar en el portal',
+      sec2_sub: 'Siete pasos — desde la invitación hasta la confirmación. El flujo es el mismo para todos los servicios; lo que cambia es el conjunto de campos exigidos (ver Sección 01).',
+      slogan: 'Tu experiencia, nuestro deporte.',
+      footer_window: 'Ventana',
+    },
+    fields: {
+      nome: { label: 'Nombre', help: 'Conforme al pasaporte.' },
+      sobrenome: { label: 'Apellido', help: 'Conforme al pasaporte.' },
+      nacionalidade: { label: 'Nacionalidad', help: 'Nombre completo o ISO 3166-1 alpha-2 (BR, AR, US).' },
+      paisRes: { label: 'País de residencia', help: 'Nombre completo o ISO 3166-1 alpha-2.' },
+      passaporte: { label: 'Pasaporte', help: 'Solo números y letras, sin espacios.' },
+      docNacional: { label: 'Documento nacional', help_template: 'Documento nacional obligatorio para pasajeros de {country}. Solo números y letras, sin espacios.' },
+      nascimento: { label: 'Fecha de nacimiento', help: 'Formato DD/MM/AAAA o AAAA-MM-DD.' },
+      telefone: { label: 'Teléfono', help: 'Internacional con código del país. Ej: +55 21 91234-5678.' },
+      emailFifa: { label: 'E-mail (FIFA ID Email)', help: 'Debe ser exactamente el correo vinculado al FIFA ID del pasajero. Es allí donde la FIFA entrega la entrada.' },
+    },
+    tag_required: 'Obligatorio',
+    tag_fifa: 'FIFA ID Email',
+    tag_country_prefix: 'Específico',
+    steps: [
+      { title: 'Reciba el correo de invitación', desc: 'Cuando el invoice esté listo para la recolección de datos, el revendedor recibe un correo de ABSOLUT Sport con el número del invoice, el correo de acceso y el botón <strong>Open portal and fill in</strong>.', tip: 'El correo de acceso es único y personal. No lo comparta.' },
+      { title: 'Regístrese o active su cuenta', desc: 'En el primer acceso, defina su nombre completo y cree una contraseña (mínimo 8 caracteres, con letras y números). ¿Ya tiene cuenta? Haga clic en <code>Back to sign in</code>.', tip: 'El idioma del portal se puede cambiar en la esquina superior derecha (EN · ES · PT).' },
+      { title: 'Acepte los términos legales', desc: 'Antes de acceder al portal, lea y acepte los <strong>Términos de Uso</strong> y la <strong>Política de Privacidad</strong>. La aceptación se registra con IP y fecha/hora como evidencia.', tip: '<strong>Obligatorio:</strong> aceptación de los términos. <strong>Opcional:</strong> consentimiento para datos sensibles y comunicaciones de marketing.' },
+      { title: 'Acceda al panel del invoice', desc: 'Visualice todos los invoices vinculados a su cuenta con estado, partido, producto y progreso. Use los filtros (<code>Pending</code>, <code>In progress</code>, <code>Completed</code>) y la barra de búsqueda.', tip: null },
+      { title: 'Elija el método de llenado', desc: '<strong>Camino A — Planilla:</strong> recomendado para muchos pasajeros. Descargue el template, complete en Excel y vuelva a subirlo.<br><br><strong>Camino B — Formulario:</strong> recomendado para pocos pasajeros o cuando el cliente final completa sus propios datos.', tip: null },
+      { title: 'Complete los datos de los pasajeros', desc: 'Complete los campos obligatorios del producto contratado. En productos con Ticket, el correo informado debe ser exactamente el vinculado al FIFA ID — repítalo en la columna <code>Confirm FIFA ID Email</code>.', tip: 'Después de la primera presentación confirmada, el correo en las hojas de Ticket queda <strong>BLOQUEADO</strong>. Revise antes de enviar.' },
+      { title: 'Confirmación y estado final', desc: 'Cuando todos los pasajeros estén completados, el indicador llega al <strong>100%</strong> con el mensaje <em>All passengers filled!</em>. El invoice aparece como <code>Completed</code>.', tip: 'La pestaña <strong>History</strong> permite revisar los datos enviados.' },
+    ],
+    etapa: 'Paso',
+  },
+};
+
+// ─── SERVICE → FIELDS MAPPING ───────────────────
+const SERVICE_FIELDS = {
+  ticket:   ['nome', 'sobrenome', 'telefone', 'emailFifa'],
+  hotel:    ['nome', 'sobrenome', 'nacionalidade', 'paisRes', 'passaporte', 'docNacional', 'nascimento'],
+  transfer: ['nome', 'sobrenome', 'telefone', 'emailFifa'],
+  seguro:   ['nome', 'sobrenome', 'nacionalidade', 'passaporte', 'docNacional', 'nascimento'],
+};
+const SERVICE_META = {
+  ticket:   { icon: 'ticket', hasFifa: true },
+  hotel:    { icon: 'hotel',  hasFifa: false },
+  transfer: { icon: 'car',    hasFifa: true },
+  seguro:   { icon: 'shield', hasFifa: false },
+};
+const FIELD_ICONS = {
+  nome: 'user', sobrenome: 'user',
+  nacionalidade: 'globe', paisRes: 'globe',
+  passaporte: 'passport',
+  docNacional: 'id',
+  nascimento: 'calendar',
+  telefone: 'phone',
+  emailFifa: 'mail',
+};
+const FIELD_ORDER = ['nome', 'sobrenome', 'nacionalidade', 'paisRes', 'passaporte', 'docNacional', 'nascimento', 'telefone', 'emailFifa'];
+
+// ─── STATE ──────────────────────────────────────
+const state = {
+  currentCountry: null,
+  currentLang: 'pt',
+  selectedServices: new Set(),
+};
+
+// ─── RENDER: HOME ─────────────────────────────
+function renderHome() {
+  const view = document.getElementById('view-home');
+  const t = I18N.pt;
+
+  const dayCells = t.home.day_labels.map((label, i) => {
+    const num = String(11 + i);
+    return `<div class="gantt-day"><span class="day-num">${num}</span><span class="day-label">${label}</span></div>`;
+  }).join('') + '<div class="gantt-day-trail"></div>';
+
+  // For each row: bar in cols [start..end], label in col [end .. end+1]
+  const rows = COUNTRIES.map(c => {
+    const [start, end] = c.col;
+    const labelStart = end;
+    const labelEnd = end + 1;
+    return `
+      <div class="gantt-row">
+        <div class="gantt-bar-cell" style="grid-column: ${start} / ${end};">
+          <div class="gantt-bar" style="background:${c.color};" onclick="showCountry('${c.id}')">
+            <span class="bar-start">${t.home.bar_start} ${c.start}</span>
+            <span class="bar-end">${t.home.bar_end} ${c.end}</span>
+            <span class="bar-arrow">${icons.arrow}</span>
+          </div>
+        </div>
+        <div class="gantt-label" style="grid-column: ${labelStart} / ${labelEnd};" onclick="showCountry('${c.id}')">
+          <span class="order-num">${String(c.order).padStart(2,'0')}</span>
+          <span class="iso">${c.iso}</span>
+          <span class="name">${c.name}</span>
+        </div>
+      </div>`;
+  }).join('');
+
+  view.innerHTML = `
+    <div class="hero">
+      <div class="hero-eyebrow">
+        <span class="num">${t.home.eyebrow_left}</span>
+        <span class="sep"></span>
+        <span>${t.home.eyebrow_right}</span>
+      </div>
+      <h1 class="hero-title">${t.home.title_1}<br><em>${t.home.title_2}</em></h1>
+      <p class="hero-lede">${t.home.lede}</p>
+    </div>
+
+    <div class="gantt-wrap">
+      <div class="gantt-head">
+        <span class="gantt-title">${t.home.gantt_title}</span>
+        <span class="gantt-meta">${t.home.gantt_meta}</span>
+      </div>
+      <div class="gantt">
+        ${dayCells}
+        ${rows}
+      </div>
+      <div class="gantt-instructions">
+        ${icons.cursor}
+        <div>${t.home.instructions}</div>
+      </div>
+    </div>
+
+    <footer class="view-footer">
+      <div class="slogan">${t.home.slogan}</div>
+      <div class="divider"></div>
+      <div class="meta">ABSOLUT Sport · Cronograma de Envio · Copa do Mundo FIFA 2026™</div>
+    </footer>
+  `;
+}
+
+// ─── RENDER: COUNTRY ─────────────────────────
+function renderCountry() {
+  const c = COUNTRIES.find(x => x.id === state.currentCountry);
+  if (!c) return showHome();
+  const t = I18N[state.currentLang].country;
+  const view = document.getElementById('view-country');
+
+  const stepsT = I18N[state.currentLang].steps;
+  const stepIcons = [icons.inbox, icons.key, icons.shieldStep, icons.layout, icons.branch, icons.edit, icons.check];
+  const stepsHtml = stepsT.map((s, i) => `
+    <div class="step">
+      <div class="step-circle">${stepIcons[i]}</div>
+      <div class="step-content">
+        <span class="step-num">${I18N[state.currentLang].etapa} ${String(i+1).padStart(2,'0')}</span>
+        <h3 class="step-title">${s.title}</h3>
+        <p class="step-desc">${s.desc}</p>
+        ${s.tip ? `<div class="step-tips">${s.tip}</div>` : ''}
+      </div>
+    </div>`).join('');
+
+  const filterButtons = ['ticket', 'hotel', 'transfer', 'seguro'].map(s => {
+    const isActive = state.selectedServices.has(s);
+    const icon = icons[SERVICE_META[s].icon];
+    const name = t['filter_' + s];
+    return `
+      <button class="filter-btn ${isActive ? 'active' : ''}" data-service="${s}" onclick="toggleService('${s}')">
+        <div class="filter-check">${icons.checkSmall}</div>
+        <div class="filter-icon">${icon}</div>
+        <div class="filter-name">${name}</div>
+      </button>`;
+  }).join('');
+
+  view.innerHTML = `
+    <div class="country-hero">
+      <div class="country-hero-flag">${c.flag}</div>
+      <h1 class="country-hero-name"><em>${t.envio_para}</em><br>${c.name}.</h1>
+
+      <div class="country-toolbar">
+        <div class="country-window">
+          <div class="country-window-block">
+            <span class="country-window-label">${t.window_start}</span>
+            <span class="country-window-date">${c.start}</span>
+          </div>
+          <div class="country-window-arrow">→</div>
+          <div class="country-window-block">
+            <span class="country-window-label">${t.window_end}</span>
+            <span class="country-window-date">${c.end}</span>
+          </div>
+          <div class="country-window-arrow">·</div>
+          <div class="country-window-block">
+            <span class="country-window-label">${t.window_doc}</span>
+            <span class="country-window-date">${c.doc}</span>
+          </div>
+        </div>
+
+        <div class="lang-switch">
+          ${['pt','en','es'].map(lang => {
+            const l = I18N[lang];
+            return `<button class="lang-btn ${state.currentLang === lang ? 'active' : ''}" onclick="switchLang('${lang}')">
+              <span class="lang-flag">${l.flag}</span><span>${l.label}</span>
+            </button>`;
+          }).join('')}
+        </div>
+
+        <button class="download-btn" onclick="downloadGuide()">
+          <span class="dl-icon">${icons.download}</span>
+          <span>${t.download}</span>
+        </button>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="section-head">
+        <div class="section-num">${t.sec1_num}</div>
+        <div>
+          <h2 class="section-title">${t.sec1_title}</h2>
+          <p class="section-sub">${t.sec1_sub}</p>
+        </div>
+      </div>
+      <div class="section-body">
+        <span class="filter-label">${t.filter_label}</span>
+        <div class="filter-bar">${filterButtons}</div>
+        <div id="required-panel"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div class="section-num">${t.sec2_num}</div>
+        <div>
+          <h2 class="section-title">${t.sec2_title}</h2>
+          <p class="section-sub">${t.sec2_sub}</p>
+        </div>
+      </div>
+      <div class="section-body">
+        <div class="stepper">${stepsHtml}</div>
+      </div>
+    </section>
+
+    <footer class="view-footer">
+      <div class="slogan">${t.slogan}</div>
+      <div class="divider"></div>
+      <div class="meta">ABSOLUT Sport · ${c.name} · ${t.footer_window} ${c.start} – ${c.end} · Copa do Mundo FIFA 2026™</div>
+    </footer>
+  `;
+
+  renderRequiredPanel();
+}
+
+// ─── RENDER: REQUIRED PANEL ──────────────────
+function renderRequiredPanel() {
+  const panel = document.getElementById('required-panel');
+  if (!panel) return;
+  const c = COUNTRIES.find(x => x.id === state.currentCountry);
+  const t = I18N[state.currentLang];
+  const tc = t.country;
+
+  if (state.selectedServices.size === 0) {
+    panel.innerHTML = `
+      <div class="required-panel">
+        <div class="required-empty">
+          <div class="required-empty-icon">${icons.empty}</div>
+          <div class="required-empty-text">${tc.empty_text}</div>
+        </div>
+      </div>`;
+    return;
+  }
+
+  // Collect unique fields preserving global order
+  const unionSet = new Set();
+  state.selectedServices.forEach(s => {
+    SERVICE_FIELDS[s].forEach(f => unionSet.add(f));
+  });
+  const uniqueFields = FIELD_ORDER.filter(k => unionSet.has(k));
+
+  const anyFifa = [...state.selectedServices].some(s => SERVICE_META[s].hasFifa);
+
+  const fieldsHtml = uniqueFields.map(key => {
+    const isCountry = key === 'docNacional';
+    const isFifa = key === 'emailFifa';
+    const cls = (isCountry || isFifa) ? ' highlight' : '';
+    const fieldT = t.fields[key];
+
+    let label, help, tag;
+
+    if (isCountry) {
+      label = `${fieldT.label} — <strong style="color:var(--gold);font-weight:700;">${c.doc}</strong>`;
+      help = fieldT.help_template
+        .replace('{country}', `<strong style="color:var(--navy-deep);">${c.name}</strong> ${c.flag}`);
+      tag = `<span class="field-tag tag-country">${t.tag_country_prefix} · ${c.name}</span>`;
+    } else if (isFifa) {
+      label = fieldT.label;
+      help = fieldT.help;
+      tag = `<span class="field-tag tag-fifa">${t.tag_fifa}</span>`;
+    } else {
+      label = fieldT.label;
+      help = fieldT.help;
+      tag = `<span class="field-tag tag-required">${t.tag_required}</span>`;
+    }
+
+    return `
+      <div class="field-card${cls}">
+        <div class="field-icon">${icons[FIELD_ICONS[key]]}</div>
+        <div class="field-label">${label}</div>
+        <div class="field-help">${help}</div>
+        ${tag}
+      </div>`;
+  }).join('');
+
+  const selectedNames = ['ticket','hotel','transfer','seguro']
+    .filter(s => state.selectedServices.has(s))
+    .map(s => tc['filter_' + s])
+    .join(' · ');
+
+  const fifaWarn = anyFifa ? `<div class="required-note">${tc.fifa_warn}</div>` : '';
+  const countLabel = uniqueFields.length === 1 ? tc.count_one : tc.count_many;
+
+  panel.innerHTML = `
+    <div class="required-panel">
+      <div class="required-header">
+        <div class="required-header-title">${tc.required_title} · ${selectedNames}</div>
+        <div class="required-header-count">${uniqueFields.length} ${countLabel}</div>
+      </div>
+      <div class="fields-grid">${fieldsHtml}</div>
+      ${fifaWarn}
+    </div>
+  `;
+}
+
+// ─── ACTIONS ──────────────────────────────────
+function toggleService(service) {
+  if (state.selectedServices.has(service)) {
+    state.selectedServices.delete(service);
+  } else {
+    state.selectedServices.add(service);
+  }
+  // toggle active class without full rerender
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    const s = btn.dataset.service;
+    btn.classList.toggle('active', state.selectedServices.has(s));
+  });
+  renderRequiredPanel();
+}
+
+function switchLang(lang) {
+  state.currentLang = lang;
+  renderCountry();
+  document.getElementById('topbar-right').innerHTML = `<button class="back-btn" onclick="goHome(event)">${icons.back} ${I18N[state.currentLang].country.back}</button>`;
+}
+
+function downloadGuide() {
+  const langLabel = I18N[state.currentLang].country.download_lang;
+  const messages = {
+    pt: `📄 ${langLabel}\n\nO guia em PDF será disponibilizado em breve.\n(Botão preparado — substituir pelo arquivo correto quando disponível.)`,
+    en: `📄 ${langLabel}\n\nThe PDF guide will be available soon.\n(Button ready — replace with the correct file when available.)`,
+    es: `📄 ${langLabel}\n\nLa guía en PDF estará disponible pronto.\n(Botón preparado — reemplazar por el archivo correcto cuando esté disponible.)`,
+  };
+  alert(messages[state.currentLang]);
+}
+
+// ─── ROUTING ──────────────────────────────────
+function showHome() {
+  document.getElementById('view-home').classList.add('active');
+  document.getElementById('view-country').classList.remove('active');
+  document.getElementById('topbar-right').innerHTML = '<div class="topbar-meta">Copa do Mundo FIFA 2026™</div>';
+  window.scrollTo({ top: 0, behavior: 'instant' });
+}
+
+function showCountry(countryId) {
+  state.currentCountry = countryId;
+  state.selectedServices = new Set();
+  renderCountry();
+  document.getElementById('view-home').classList.remove('active');
+  document.getElementById('view-country').classList.add('active');
+  document.getElementById('topbar-right').innerHTML = `<button class="back-btn" onclick="goHome(event)">${icons.back} ${I18N[state.currentLang].country.back}</button>`;
+  window.scrollTo({ top: 0, behavior: 'instant' });
+  history.pushState({ country: countryId }, '', '#' + countryId);
+}
+
+function goHome(event) {
+  if (event) event.preventDefault();
+  showHome();
+  history.pushState({}, '', window.location.pathname);
+}
+
+window.addEventListener('popstate', () => {
+  const hash = window.location.hash.slice(1);
+  if (hash && COUNTRIES.find(c => c.id === hash)) {
+    showCountry(hash);
+  } else {
+    showHome();
+  }
+});
+
+// ─── INIT ─────────────────────────────────────
+renderHome();
+const initialHash = window.location.hash.slice(1);
+if (initialHash && COUNTRIES.find(c => c.id === initialHash)) {
+  showCountry(initialHash);
+}
+</script>
+
+</body>
+</html>
